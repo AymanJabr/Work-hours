@@ -2,7 +2,7 @@ class WorkhoursController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    #To be changed
+    # To be changed
     @workhour = Workhour.all
   end
 
@@ -11,13 +11,13 @@ class WorkhoursController < ApplicationController
   end
 
   def index_external
-    #To be changed
+    # To be changed
     @workhour = Workhour.all
   end
 
-#   def edit
-#     @workhour = current_user.workhours.find(params[:id])
-#   end
+  #   def edit
+  #     @workhour = current_user.workhours.find(params[:id])
+  #   end
 
   def new
     @workhour = current_user.workhours.new
@@ -26,9 +26,9 @@ class WorkhoursController < ApplicationController
   def create
     @workhour = current_user.workhours.new(workhour_params)
     if @workhour.save
-        redirect_to workhours_path
-      else
-        render :new
+      redirect_to workhours_path
+    else
+      render :new
     end
   end
 

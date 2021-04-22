@@ -9,16 +9,16 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-  def new 
+  def new
     @group = current_user.groups.new
   end
 
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
-        redirect_to @group, notice: 'Group succesfully created'
+      redirect_to @group, notice: 'Group succesfully created'
     else
-        render :new
+      render :new
     end
   end
 
