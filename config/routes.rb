@@ -7,10 +7,7 @@ Rails.application.routes.draw do
   resources :workhours
   get '/index_external', to: 'workhours#index_external'
 
+  root 'users#show'
 
 
-
-  # get '/patients/:id', to: 'patients#show', as: 'patient'
-  # @patient = Patient.find(params[:id])
-  # <%= link_to 'Patient Record', patient_path(@patient) %>
 end
