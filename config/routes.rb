@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  # resource :users, only: [:show, :index]: 
-  resource :users
-  resource :groups
-  resource :workhours
-  get '/external_workhours/:id', to: 'worhours#external_show', as: 'workhour'
+  # resource :users, only: [:show, :index] 
+  resources :users
+  resources :groups
+  resources :workhours
+  get '/external_workhours/:id', to: 'worhours#external_show'
 
 
 

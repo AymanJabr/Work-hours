@@ -7,13 +7,13 @@ class WorkhoursController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @workhour = current_user.workhours.new(workhour_params)
 
-    if @post.save
-      redirect_to posts_path, notice: 'Post was successfully created.'
+    if @workhour.save
+    #   redirect_to posts_path, notice: 'Post was successfully created.'
     else
-      timeline_posts
-      render :index, alert: 'Post was not created.'
+    #   timeline_posts
+    #   render :index, alert: 'Post was not created.'
     end
   end
 
@@ -23,7 +23,7 @@ class WorkhoursController < ApplicationController
 #     @timeline_posts ||= Post.where(user: current_user.friends + [current_user.id]).ordered_by_most_recent
 #   end
 
-  def post_params
-    params.require(:post).permit(:content)
+  def workhour_params
+    params.require(:workhour).permit(:name, :amount)
   end
 end
