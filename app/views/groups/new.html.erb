@@ -1,4 +1,12 @@
 New Group Form
 
-- Group Name
-- Group Icon
+<%= form_for @group do |form| %>
+
+ <%= form.label :name %>
+ <%= form.text_field :name %>
+  <%= tag(:br) %>
+  <%= tag(:br) %>
+   <%= form.label :icon %>
+ <%= form.text_field :icon %> (hr)
+ <%= form.submit  %>
+<% end %>
