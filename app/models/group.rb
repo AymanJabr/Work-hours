@@ -8,5 +8,5 @@ class Group < ApplicationRecord
   validates :icon, presence: true
 
   scope :in_order, -> { order(created_at: :desc) }
-  scope :in_alphabetical_order, -> { order(name: :asc)}
+  scope :in_alphabetical_order, -> { order(name: :asc) }
 end

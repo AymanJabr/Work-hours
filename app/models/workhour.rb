@@ -11,7 +11,6 @@ class Workhour < ApplicationRecord
 
   def first_group_icon
     group = Group.all
-    group = group.in_order.first.icon
+    group.in_order.first.icon
   end
-
 end

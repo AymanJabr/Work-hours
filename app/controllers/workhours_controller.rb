@@ -3,7 +3,7 @@ class WorkhoursController < ApplicationController
 
   def index
     @workhour = current_user.assigned_workhours
-    @first_icons = @workhour.map {|workhour| workhour.first_group_icon}
+    @first_icons = @workhour.map(&:first_group_icon)
   end
 
   def show
@@ -26,7 +26,6 @@ class WorkhoursController < ApplicationController
       render :new
     end
   end
-
 
   private
 
