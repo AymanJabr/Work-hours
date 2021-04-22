@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resource :users, :groups, :workhours
+  get '/external_workhours/:id', to: 'worhours#external_show', as: 'workhour'
+
+
+
+
+  # get '/patients/:id', to: 'patients#show', as: 'patient'
+  # @patient = Patient.find(params[:id])
+  # <%= link_to 'Patient Record', patient_path(@patient) %>
 end
