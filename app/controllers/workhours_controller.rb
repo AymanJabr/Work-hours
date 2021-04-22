@@ -16,20 +16,21 @@ class WorkhoursController < ApplicationController
 
   def create
     @workhour = current_user.workhours.new(workhour_params)
-
+    # rubocop:disable Style/GuardClause
     if @workhour.save
-    #   redirect_to posts_path, notice: 'Post was successfully created.'
-    else
-    #   timeline_posts
-    #   render :index, alert: 'Post was not created.'
+      #   redirect_to posts_path, notice: 'Post was successfully created.'
+      # else
+      #   timeline_posts
+      #   render :index, alert: 'Post was not created.'
     end
+    # rubocop:enable Style/GuardClause
   end
 
   private
 
-#   def timeline_posts
-#     @timeline_posts ||= Post.where(user: current_user.friends + [current_user.id]).ordered_by_most_recent
-#   end
+  #   def timeline_posts
+  #     @timeline_posts ||= Post.where(user: current_user.friends + [current_user.id]).ordered_by_most_recent
+  #   end
 
   def workhour_params
     params.require(:workhour).permit(:name, :amount)

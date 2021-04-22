@@ -11,13 +11,14 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.new(group_params)
-
+    # rubocop:disable Style/GuardClause
     if @group.save
-    #   redirect_to posts_path, notice: 'Post was successfully created.'
-    else
-    #   timeline_posts
-    #   render :index, alert: 'Post was not created.'
+      #   redirect_to posts_path, notice: 'Post was successfully created.'
+      # else
+      #   timeline_posts
+      #   render :index, alert: 'Post was not created.'
     end
+    # rubocop:enable Style/GuardClause
   end
 
   private
@@ -25,5 +26,4 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon)
   end
-
 end
