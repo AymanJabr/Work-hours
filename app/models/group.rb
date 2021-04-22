@@ -6,4 +6,7 @@ class Group < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true
+
+  scope :in_order, -> { order(created_at: :desc) }
+  scope :in_alphabetical_order, -> { order(name: :asc) }
 end

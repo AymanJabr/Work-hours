@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @group = Group.all
+    @group = Group.all.in_alphabetical_order
   end
 
   def show
