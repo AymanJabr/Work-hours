@@ -6,6 +6,14 @@ class WorkhoursController < ApplicationController
     # timeline_posts
   end
 
+  def show
+    @workhour = current_user
+  end
+
+  def index_external
+    @worhours = current_user
+  end
+
   def create
     @workhour = current_user.workhours.new(workhour_params)
 

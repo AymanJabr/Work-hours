@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :groups
   resources :workhours
-  get '/external_workhours/:id', to: 'worhours#external_show'
+  get '/index_external', to: 'workhours#index_external'
 
 
 
