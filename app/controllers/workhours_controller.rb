@@ -2,8 +2,8 @@ class WorkhoursController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # To be changed
-    @workhour = Workhour.all
+    @workhour = current_user.assigned_workhours
+    @first_icons = @workhour.map {|workhour| workhour.first_group_icon}
   end
 
   def show
@@ -11,13 +11,8 @@ class WorkhoursController < ApplicationController
   end
 
   def index_external
-    # To be changed
-    @workhour = Workhour.all
+    @workhour = current_user.unassigned_workhours
   end
-
-  #   def edit
-  #     @workhour = current_user.workhours.find(params[:id])
-  #   end
 
   def new
     @workhour = current_user.workhours.new
@@ -31,6 +26,7 @@ class WorkhoursController < ApplicationController
       render :new
     end
   end
+
 
   private
 

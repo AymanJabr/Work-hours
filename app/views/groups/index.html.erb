@@ -1,6 +1,15 @@
 All Groups 
 
--List all groups in alphabetical ordered
--Group displays [icon, name, creation date]
--Each group when clicked shows group transaction page [show page]
--"Create new group" button
+<% @group.each do |group| %>
+   <p>Group Name: <%= group.name %> </p>
+   <p>Created At: <%= group.created_at %> </p>
+   <p>Group Icon: <%= group.icon %> </p>
+    <%= link_to 'Add Group Workhours', group_path(group) %>
+<% end %>
+<%  %>
+<%  %>
+<%=  %>
+<%= link_to 'Create new Group', new_group_path %>
+<%=  %>
+<%=  %>
+<%=  %>
