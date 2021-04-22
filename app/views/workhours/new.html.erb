@@ -1,4 +1,12 @@
-New Workhour Form
+New Workhours Form:
 
-- Name
-- Ammount (hr)
+<%= form_for @workhour do |form| %>
+
+ <%= form.label :name %>
+ <%= form.text_field :name %>
+  <%= tag(:br) %>
+  <%= tag(:br) %>
+   <%= form.label :amount %>
+ <%= form.number_field :amount %> (hr)
+ <%= form.submit  %>
+<% end %>
