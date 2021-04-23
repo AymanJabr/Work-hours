@@ -1,8 +1,13 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
+  require 'date'
 
   def index
     @group = Group.all.in_alphabetical_order
+  end
+
+  def monthly_report
+    @groups = Group.all.map { |group| group if group.workhours.any? }.compact
   end
 
   def show
