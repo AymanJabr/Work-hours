@@ -4,12 +4,8 @@ All Groups
    <p>Group Name: <%= group.name %> </p>
    <p>Created At: <%= group.created_at %> </p>
    <p>Group Icon: <%= group.icon %> </p>
-    <%= link_to 'Add Group Workhours', group_path(group) %>
+    <%= link_to "See all #{group.name} Workhours", group_path(group) %>
 <% end %>
-<%  %>
-<%  %>
-<%=  %>
+
+<br>
 <%= link_to 'Create new Group', new_group_path %>
-<%=  %>
-<%=  %>
-<%=  %>
