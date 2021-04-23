@@ -1,0 +1,12 @@
+Edit Workhours Form:
+
+<%= form_for @workhour do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= tag(:br) %>
+  <%= tag(:br) %>
+  <%= form.label :amount %>
+  <%= form.number_field :amount %> (hr)
+  <%= form.collection_check_boxes :group_ids, Group.all, :id, :name %>
+  <%= form.submit  %>
+<% end %>

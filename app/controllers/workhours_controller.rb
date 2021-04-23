@@ -10,6 +10,10 @@ class WorkhoursController < ApplicationController
     @workhour = Workhour.find(params[:id])
   end
 
+  def edit
+    @workhour = Workhour.find(params[:id])
+  end
+
   def index_external
     @workhour = current_user.unassigned_workhours
   end

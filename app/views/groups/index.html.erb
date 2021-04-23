@@ -4,6 +4,7 @@ All Groups
    <p>Group Name: <%= group.name %> </p>
    <p>Created At: <%= group.created_at %> </p>
    <p>Group Icon: <%= group.icon %> </p>
+    <%= link_to "Edit Group", edit_group_path(group) %>
     <%= link_to "See all #{group.name} Workhours", group_path(group) %>
 <% end %>
 
