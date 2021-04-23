@@ -1,13 +1,14 @@
 Group Workhours
 
 
-<% @group.workhours.each do |group| %>
-   <p>Created by: <%= group.user.name %> </p>
-   <p>Group Name: <%= group.name %> </p>
-   <p>Created At: <%= group.created_at %> </p>
-   <p>Group Icon: <%= group.icon %> </p>
-    <%# <%= link_to 'Add Workhours to group', group_path(group) %> %>
+<% @group.workhours.each do |workhour| %>
+   <p>Created by: <%= workhour.user.name %> </p>
+   <p>Group Name: <%= workhour.name %> </p>
+   <p>Created At: <%= workhour.created_at %> </p>
+   <p>Group Icon: <%= workhour.first_group_icon %> </p>
 <% end %>
 
+<br>
 
 <%= link_to 'Create new Group', new_group_path %>
+<%= link_to 'Add new Workhours', new_workhour_path %>

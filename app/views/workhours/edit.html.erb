@@ -1,4 +1,4 @@
-New Workhours Form:
+Edit Workhours Form:
 
 <%= form_for @workhour do |form| %>
   <%= form.label :name %>
@@ -10,4 +10,3 @@ New Workhours Form:
   <%= form.collection_check_boxes :group_ids, Group.all, :id, :name %>
   <%= form.submit  %>
 <% end %>
-

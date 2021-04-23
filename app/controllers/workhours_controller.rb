@@ -10,6 +10,10 @@ class WorkhoursController < ApplicationController
     @workhour = Workhour.find(params[:id])
   end
 
+  def edit
+    @workhour = Workhour.find(params[:id])
+  end
+
   def index_external
     @workhour = current_user.unassigned_workhours
   end
@@ -23,6 +27,7 @@ class WorkhoursController < ApplicationController
     if @workhour.save
       redirect_to workhours_path
     else
+      # p "\n\nFAILED\n\n"
       render :new
     end
   end
@@ -30,6 +35,7 @@ class WorkhoursController < ApplicationController
   private
 
   def workhour_params
-    params.require(:workhour).permit(:name, :amount)
+    # params.require(:workhour).permit(:name, :amount)
+    params.require(:workhour).permit(:name, :amount, group_ids: [])
   end
 end
