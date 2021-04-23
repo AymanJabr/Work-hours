@@ -10,6 +10,8 @@ gem 'sqlite3', '~> 1.4'
 
 gem 'devise'
 
+gem 'rexml'
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

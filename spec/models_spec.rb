@@ -11,41 +11,34 @@ RSpec.describe User, type: :model do
       user = User.new(name: 'Username')
       expect(user.valid?).to eq(false)
     end
-    # it 'sucessfully creates a new Post from a user' do
-    #   user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
-    #   post = user.posts.build(content: 'Some specific content')
-    #   expect(post.valid?).to eq(true)
-    # end
-    # it 'Does not creates a new Post from a user' do
-    #   user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
-    #   post = user.posts.build
-    #   expect(post.valid?).to eq(false)
-    # end
-    # it 'sucessfully creates a new Comment from a user' do
-    #   user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
-    #   user.save
-    #   post = user.posts.create(content: 'Some specific content')
-    #   comment = user.comments.build(content: 'Some specific comment', post_id: post.id)
-    #   expect(comment.valid?).to eq(true)
-    # end
-    # it 'Does not creates a new Comment from a user' do
-    #   user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
-    #   post = user.posts.build(content: 'Some specific content')
-    #   comment = post.comments.build
-    #   expect(comment.valid?).to eq(false)
-    # end
-    # it 'sucessfully creates a new Like from a user' do
-    #   user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
-    #   user.save
-    #   post = user.posts.create(content: 'Some specific content')
-    #   like = user.likes.build(post_id: post.id)
-    #   expect(like.valid?).to eq(true)
-    # end
-    # it 'Does not creates a new Like from a user' do
-    #   user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
-    #   like = user.likes.build
-    #   expect(like.valid?).to eq(false)
-    # end
+    it 'sucessfully creates a new Group from a user' do
+      user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
+      group = user.groups.build(name: 'Some specific group name', icon: 'this groups icon')
+      expect(group.valid?).to eq(true)
+    end
+    it 'Does not creates a new Group from a user' do
+      user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
+      group = user.groups.build
+      expect(group.valid?).to eq(false)
+    end
+    it 'sucessfully creates a new Workhour from a user' do
+      user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
+      workhour = user.workhours.build(name: 'Some specific workhour name', amount: 50.0)
+      expect(workhour.valid?).to eq(true)
+    end
+    it 'Does not creates a new Workhour from a user' do
+      user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
+      workhour = user.workhours.build
+      expect(workhour.valid?).to eq(false)
+    end
+    it 'sucessfully creates a new Group-Workhour from a Workhour and a Group' do
+      user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
+      user.save
+      group = user.groups.create(name: 'Some specific group name', icon: 'this groups icon')
+      workhour = user.workhours.create(name: 'Some specific workhour name', amount: 42.3)
+      group_workhour = workhour.group_workhours.create(group_id: group.id)
+      expect(group_workhour.valid?).to eq(true)
+    end
   end
 end
 # rubocop:enable Metrics/BlockLength
