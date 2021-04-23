@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :workhours
   get '/index_external', to: 'workhours#index_external'
 
-
+  root 'groups#index'
 
 
   # get '/patients/:id', to: 'patients#show', as: 'patient'
