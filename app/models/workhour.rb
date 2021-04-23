@@ -6,4 +6,11 @@ class Workhour < ApplicationRecord
 
   validates :name, presence: true
   validates :amount, presence: true
+
+  scope :in_order, -> { order(created_at: :desc) }
+
+  def first_group_icon
+    group = Group.all
+    group.in_order.first.icon
+  end
 end

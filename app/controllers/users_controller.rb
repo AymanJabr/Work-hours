@@ -3,11 +3,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # @friends = current_user.friends
-    # @friends = @friends.delete(current_user)
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
   end
 end
