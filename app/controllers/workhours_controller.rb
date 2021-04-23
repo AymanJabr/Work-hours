@@ -36,6 +36,6 @@ class WorkhoursController < ApplicationController
 
   def workhour_params
     # params.require(:workhour).permit(:name, :amount)
-    params.require(:workhour).permit(:name, :amount, group_ids:[])
+    params.require(:workhour).permit(:name, :amount, group_ids: [])
   end
 end

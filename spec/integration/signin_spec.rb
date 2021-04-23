@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.describe 'Sign in page', type: :system do
   describe 'index page' do
     it 'shows sign in ' do
