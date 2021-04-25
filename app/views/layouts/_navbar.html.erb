@@ -2,15 +2,14 @@
 <nav>
       <div class="my-dropdown">
         <button class="dropbtn"">
-          <i class="fas fa-bars fa-lg"></i>
+          <i class="fas fa-bars fa-2x"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
           <%= link_to 'My Profile', root_path %>
           <%= menu_link_to 'All my Workhours', workhours_path %>
           <%= menu_link_to 'Unassigned Workhours', index_external_path %>
           <%= menu_link_to 'All groups', groups_path %>
-          <%= menu_link_to 'Monthly Reports', groups_path %>
-          <a href="#">Monthly Report</a>
+          <%= menu_link_to 'Monthly Reports', monthly_report_path %>
           <br />
           <% if current_user %>
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>

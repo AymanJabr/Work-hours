@@ -21,6 +21,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover {
     text-decoration: none;
     cursor: pointer;
@@ -35,7 +39,7 @@ nav {
 
 nav a {
   float: left;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   color: white;
   text-align: center;
@@ -107,7 +111,8 @@ nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
   grid-template-areas: 
     "image name name . amount"
     "image . . . amount"
-    "image date . . amount";
+    "image date . . amount"
+    "button button button button button";
 }
 
 .information:hover{
@@ -135,6 +140,21 @@ nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
   font-size: 0.9rem;
 }
 
+.edit-button-container{
+    grid-area: button;  
+    background-color: var(--primary-green);
+    margin-top: 20px;
+}
+
+.my-edit-button {
+    width: auto;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: block;
+    padding-left: 30%;
+    color: white;
+}
+
 .button-container {
     background-color: var(--primary-green);
     padding: 20px;
@@ -142,13 +162,13 @@ nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
 
 .my-button{
     width: auto;
-    font-size: 2rem;
-    font-weight: normal;
+    font-size: 1.5rem;
+    font-weight: bolder;
     display: block;
     border-color: white;
     border-radius: 1px;
     border-style: solid;
-    padding-left: 40%;
+    padding-left: 30%;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
