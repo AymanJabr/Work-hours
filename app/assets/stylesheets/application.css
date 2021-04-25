@@ -115,9 +115,9 @@ nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
     "button button button button button";
 }
 
-.information:hover{
+/* .information:hover{
     cursor: pointer;
-}
+} */
 
 .information-image {
   grid-area: image;
