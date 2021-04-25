@@ -1,30 +1,24 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Workhours</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a><%= link_to 'My Profile', root_path %></a></li>
-        <li><a><%= menu_link_to 'All my Workhours', workhours_path %></a></li>
-        <li><a><%= menu_link_to 'Unassigned Workhours', index_external_path %></a></li>
-        <li><a><%= menu_link_to 'All groups', groups_path %></a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-            <li><a><span class="glyphicon glyphicon-user"></span> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></a></li>
-        <% else %>
-            <li><a><span class="glyphicon glyphicon-user"></span> <%= link_to 'Sign in', user_session_path %></a></li>
-        
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+<nav>
+      <div class="my-dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <%= link_to 'My Profile', root_path %>
+          <%= menu_link_to 'All my Workhours', workhours_path %>
+          <%= menu_link_to 'Unassigned Workhours', index_external_path %>
+          <%= menu_link_to 'All groups', groups_path %>
+          <a href="#">Monthly Report</a>
+          <br />
+          <% if current_user %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', user_session_path %>
+          <% end %>
+        </div>
+      </div>
+      <a class="mid-screen">All My Transactions</a>
+    </nav>
 
 
