@@ -1,0 +1,15 @@
+
+Report for <%= Date::MONTHNAMES[Date.today.strftime("%m").to_i]  %>
+
+<br>
+<% @groups.each do |group| %>
+    <%= group.name %>
+    <br>
+    <% group.workhours.each do |workhour| %>
+        <%= workhour.user.name %> has worked 
+        <%= workhour.amount %>hours on project
+        <%= workhour.name %>
+        <br>
+    <% end %>
+    <br>
+<% end %>
