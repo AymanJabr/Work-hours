@@ -222,6 +222,51 @@ nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
     color: var(--primary-gray);
 }
 
+.group-form {
+  display: grid;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  gap: 20px;
+   color: var(--primary-gray);
+   font-size: 1.5rem;
+  grid-template-areas: 
+    "name name-field name-field name-field name-field"
+    "icon icon-field icon-field icon-field icon-field "
+    ". . . . ."
+    "button button button button button";
+}
+.group-form-name {
+  grid-area: name;
+}
+.group-form-name-field {
+  grid-area: name-field;
+   font-size: 1.2rem;
+}
+.group-form-icon {
+  grid-area: icon;
+}
+.group-form-icon-field {
+  grid-area: icon-field;
+  font-size: 1.2rem;
+}
+.group-form-button {
+   grid-area: button;
+   width: auto;
+   font-size: 1.5rem;
+    font-weight: bolder;
+    display: block;
+    border-color: white;
+    border-radius: 1px;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: var(--primary-green)
+}
+
 
 .workhour-form {
   display: grid;
@@ -247,12 +292,14 @@ nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
 }
 .workhour-form-name-field {
    grid-area: name-field;
+   font-size: 1.5rem;
 }
 .workhour-form-amount {
    grid-area: amount;
 }
 .workhour-form-amount-field {
    grid-area: amount-field;
+   font-size: 1.5rem;
 }
 .workhour-form-explanation {
   grid-area: explanation
