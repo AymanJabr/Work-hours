@@ -1,5 +1,3 @@
-
-
 :root {
   --primary-blue: #3778c2;
   --primary-green: #5fb523;
@@ -9,10 +7,12 @@
   --light-blue: #2b5f9a;
 }
 
-@font-face {
+/* @font-face {
   font-family: "proximanova";
-  src: url("./fonts/FontsFree-Net-Proxima-Nova-Bold.otf") format("opentype");
-}
+  src: asset-url("fonts/FontsFree-Net-Proxima-Nova-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+} */
 
 body {
   background-color: var(--very-light-gray);
