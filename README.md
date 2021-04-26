@@ -6,6 +6,8 @@ A user can add the workhours that he has done to the group of activities, and ca
 
 All users can see the monthly report of all projects and all workhours put into each group.
 
+![Screenshot1](./app/assets/images/screenshot.JPG)
+
 ## Built With
 
 - Ruby v2.7.0
