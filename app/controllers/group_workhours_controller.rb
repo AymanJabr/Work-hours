@@ -1,0 +1,2 @@
+class GroupWorkhoursController < ApplicationController
+end

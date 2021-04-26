@@ -1,0 +1,20 @@
+
+<% @group.each do |group| %>
+    <div class="information-group">
+        <div class="information-image"><%= group.icon %></div>
+        <div class="information-name"><%= group.name %></div>
+        <div class="information-date"><%= group.created_at %></div>
+
+        <div class="edit-button-container">
+            <%= link_to "Edit Group", edit_group_path(group), :class => "my-edit-button" %>
+        </div>
+
+        <div class="all-button-container">
+            <%= link_to "See all #{group.name} Workhours", group_path(group), :class => "my-edit-button" %>
+        </div>
+    </div>
+<% end %>
+
+<div class="button-container">
+    <%= link_to 'Create new Group', new_group_path, :class => "my-button" %>
+</div>

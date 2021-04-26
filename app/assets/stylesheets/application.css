@@ -1,15 +1,407 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+:root {
+  --primary-blue: #3778c2;
+  --primary-green: #5fb523;
+  --primary-gray: #434b54;
+  --light-gray: #989da3;
+  --very-light-gray: #f7f7f7;
+  --light-blue: #2b5f9a;
+}
+
+/* @font-face {
+  font-family: "proximanova";
+  src: asset-url("fonts/FontsFree-Net-Proxima-Nova-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+body {
+  background-color: var(--very-light-gray);
+  font-family: "proximanova", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white
+}
+
+nav {
+  overflow: hidden;
+  background-color: var(--primary-blue);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a {
+  float: left;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.mid-screen {
+    float: left;
+    margin-left: 25vw;
+}
+
+.my-dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.my-dropdown .dropbtn {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #4885cc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-blue);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  z-index: 3;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--light-blue);
+}
+
+.show-dropdown {
+  display: block;
+}
+
+.information {
+  display: grid;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "image name name . amount"
+    "image . . . amount"
+    "image date . . amount"
+    "button button button button button";
+}
+
+.information-group {
+  display: grid;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "image name name . amount"
+    "image . . . amount"
+    "image date . . amount"
+    "button button button button button"
+    "button2 button2 button2 button2 button2";
+}
+
+/* .information:hover{
+    cursor: pointer;
+} */
+
+.information-image {
+  grid-area: image;
+}
+.information-name {
+  grid-area: name;
+  color: var(--light-gray);
+  font-size: 1.8rem;
+}
+.information-amount {
+  font-size: 2.2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  grid-area: amount;
+  color: var(--primary-gray);
+}
+.information-date {
+  grid-area: date;
+  color: var(--light-gray);
+  font-size: 0.9rem;
+}
+
+.edit-button-container{
+    grid-area: button;  
+    background-color: var(--primary-green);
+    margin-top: 20px;
+}
+
+.all-button-container{
+    grid-area: button2;  
+    background-color: var(--primary-green);
+    margin-top: 20px;
+}
+
+.my-edit-button {
+    width: auto;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.button-container {
+    background-color: var(--primary-green);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.my-button{
+    width: auto;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: block;
+    border-color: white;
+    border-radius: 1px;
+    border-style: solid;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: var(--primary-green);
+}
+
+.my-button:hover {
+    background-color: #6abd2e;
+}
+
+.group-container {
+  display: grid;
+  background-color: white;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "name . . . . amount"
+}
+.group-name {
+    grid-area: name;
+    font-size: 2rem;
+    color: var(--light-gray);
+}
+.group-amount {
+    grid-area: amount;
+    float: right;
+    font-size: 2.5rem;
+    color: var(--primary-gray);
+}
+
+.sign-up-form {
+  display: grid;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  gap: 20px;
+   color: var(--primary-gray);
+   font-size: 1.5rem;
+  grid-template-areas: 
+    "email email-field email-field email-field email-field"
+    "name name-field name-field name-field name-field"
+    "password password-field password-field password-field password-field "
+    "confirm-password confirm-password-field confirm-password-field confirm-password-field confirm-password-field "
+    ". . . . ."
+    "button button button button button";
+}
+.sign-up-email {
+  grid-area: email;
+}
+.sign-up-email-field {
+  grid-area: email-field;
+   font-size: 1.2rem;
+}
+.sign-up-name {
+  grid-area: name;
+}
+.sign-up-name-field {
+  grid-area: name-field;
+   font-size: 1.2rem;
+}
+.sign-up-password {
+  grid-area: password;
+}
+.sign-up-password-field {
+  grid-area: password-field;
+  font-size: 1.2rem;
+}
+.sign-up-confirm-password {
+  grid-area: confirm-password;
+}
+.sign-up-confirm-password-field {
+  grid-area: confirm-password-field;
+  font-size: 1.2rem;
+}
+.sign-up-button {
+   grid-area: button;
+   width: auto;
+   font-size: 1.5rem;
+    font-weight: bolder;
+    display: block;
+    border-color: white;
+    border-radius: 1px;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: var(--primary-green)
+}
+
+
+
+
+.group-form {
+  display: grid;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  gap: 20px;
+   color: var(--primary-gray);
+   font-size: 1.5rem;
+  grid-template-areas: 
+    "name name-field name-field name-field name-field"
+    "icon icon-field icon-field icon-field icon-field "
+    ". . . . ."
+    "button button button button button";
+}
+.group-form-name {
+  grid-area: name;
+}
+.group-form-name-field {
+  grid-area: name-field;
+   font-size: 1.2rem;
+}
+.group-form-icon {
+  grid-area: icon;
+}
+.group-form-icon-field {
+  grid-area: icon-field;
+  font-size: 1.2rem;
+}
+.group-form-button {
+   grid-area: button;
+   width: auto;
+   font-size: 1.5rem;
+    font-weight: bolder;
+    display: block;
+    border-color: white;
+    border-radius: 1px;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: var(--primary-green)
+}
+
+
+.workhour-form {
+  display: grid;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  gap: 20px;
+   color: var(--primary-gray);
+   font-size: 1.5rem;
+  grid-template-areas: 
+    "name name-field name-field name-field name-field"
+    "amount amount-field amount-field amount-field amount-field "
+    ". . . . ."
+    "explanation explanation explanation explanation explanation"
+    "checkbox1 checkbox2 checkbox3 checkbox4 checkbox5"
+    "checkbox6 checkbox7 checkbox8 checkbox9 checkbox10"
+    "button button button button button";
+}
+.workhour-form-name {
+   grid-area: name;
+}
+.workhour-form-name-field {
+   grid-area: name-field;
+   font-size: 1.5rem;
+}
+.workhour-form-amount {
+   grid-area: amount;
+}
+.workhour-form-amount-field {
+   grid-area: amount-field;
+   font-size: 1.5rem;
+}
+.workhour-form-explanation {
+  grid-area: explanation
+}
+.workhour-form-checkbox-1 {
+   grid-area: checkbox1;
+}
+.workhour-form-checkbox-2 {
+   grid-area: checkbox2;
+}
+.workhour-form-checkbox-3 {
+   grid-area: checkbox3;
+}
+.workhour-form-checkbox-4 {
+   grid-area: checkbox4;
+}
+.workhour-form-checkbox-5 {
+   grid-area: checkbox5;
+}
+.workhour-form-checkbox-6 {
+   grid-area: checkbox6;
+}
+.workhour-form-checkbox-7 {
+   grid-area: checkbox7;
+}
+.workhour-form-checkbox-8 {
+   grid-area: checkbox8;
+}
+.workhour-form-button {
+   grid-area: button;
+   width: auto;
+    font-weight: bolder;
+    display: block;
+    border-color: white;
+    border-radius: 1px;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: var(--primary-green)
+}

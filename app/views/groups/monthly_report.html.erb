@@ -1,0 +1,28 @@
+
+
+<div class="group-container">
+   <div class="group-name"> Report for <%= Date::MONTHNAMES[Date.today.strftime("%m").to_i]  %></div>
+</div>
+
+<br>
+<% @groups.each do |group| %>
+
+    <div class="group-container">
+        <div class="group-name"><%= group.name %> Workhours</div>
+    </div>
+
+    <% group.workhours.each do |workhour| %>
+        <div class="information">
+            <div class="information-image"><%= workhour.user.name %></div>
+            <div class="information-name"><%= workhour.name %></div>
+            <div class="information-amount"><%= workhour.amount %>hrs</div>
+            <div class="information-date"><%= workhour.created_at %></div>
+
+            <div class="edit-button-container">
+                <%= link_to "Edit Workhours", edit_workhour_path(workhour), :class => "my-edit-button" %>
+            </div>
+        </div>
+    <% end %>
+
+
+<% end %>
