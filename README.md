@@ -1,6 +1,10 @@
 # WorkHours 
 
-Initial Readme for Workhours, to be updated later
+This project aims to provide an application that allows people that work in the same organization in different groups, to keep track of their work activity. 
+
+A user can add the workhours that he has done to the group of activities, and can create new groups.
+
+All users can see the monthly report of all projects and all workhours put into each group.
 
 ## Built With
 
@@ -9,7 +13,7 @@ Initial Readme for Workhours, to be updated later
 
 ## Live Demo
 
-TBA
+[Live Demo](https://project-workhours.herokuapp.com/users/sign_in)
 
 
 ## Getting Started
@@ -63,21 +67,11 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
-### Deployment
-
-TBA
-
-## Authors
-
-TBA
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
+## Authors :bust_in_silhouette:
+### Ayman Jabr
+\_[Github: @AymanJabr](https://github.com/AymanJabr/)
+\_[LinkedIn: @Ayman Jabr](https://www.linkedin.com/in/ayman-jabr/)  
 
 ## Show your support
 
@@ -85,7 +79,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+Design by Gregoire Vella: https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=& 
 
 ## 📝 License
 
