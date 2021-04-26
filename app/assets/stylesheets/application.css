@@ -220,3 +220,50 @@ nav a:hover, .my-dropdown:hover .dropbtn, .dropbtn:focus {
     font-size: 2.5rem;
     color: var(--primary-gray);
 }
+
+
+.workhour-form {
+  display: grid;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "name name-field name-field name-field name-field"
+    "amount amount-field amount-field amount-field amount-field "
+    ". . . . ."
+    "checkbox1 checkbox2 checkbox3 checkbox4 checkbox5"
+    "checkbox6 checkbox7 checkbox8 checkbox9 checkbox10"
+    "button button button button button";
+}
+.workhour-form-name {
+   grid-area: name;
+}
+.workhour-form-name-field {
+   grid-area: name-field;
+}
+.workhour-form-amount {
+   grid-area: amount;
+}
+.workhour-form-amount-field {
+   grid-area: amount-field;
+}
+.workhour-form-checkbox-1 {
+   grid-area: checkbox1;
+}
+.workhour-form-checkbox-2 {
+   grid-area: checkbox2;
+}
+.workhour-form-checkbox-3 {
+   grid-area: checkbox3;
+}
+.workhour-form-checkbox-4 {
+   grid-area: checkbox4;
+}
+.workhour-form-checkbox-5 {
+   grid-area: checkbox5;
+}
+.workhour-form-button {
+   grid-area: button;
+}

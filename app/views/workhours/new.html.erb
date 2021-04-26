@@ -1,13 +1,22 @@
-New Workhours Form:
+<div class="group-container">
+   <div class="group-name">New Workhours Form:</div>
+</div>
 
 <%= form_for @workhour do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= tag(:br) %>
-  <%= tag(:br) %>
-  <%= form.label :amount %>
-  <%= form.number_field :amount %> (hr)
-  <%= form.collection_check_boxes :group_ids, Group.all, :id, :name %>
-  <%= form.submit  %>
+  <% form.options[:html][:class] += ' workhour-form' %>
+  <%= form.label :name, class: 'workhour-form-name' %>
+  <%= form.text_field :name, class: 'workhour-form-name-field' %>
+  <%= form.label "Amount (hr)", class: 'workhour-form-amount' %>
+  <%= form.number_field :amount, class: 'workhour-form-amount-field' %> 
+
+
+  <%# <%= form.collection_check_boxes :group_ids, Group.all, :id, :name, class: 'workhour-form-checkbox' \%\> %>
+
+   <%= form.collection_check_boxes(:group_ids, Group.all, :id, :name) do |b| %>
+        <%=  b.label(class:"workhour-form-checkbox-#{b.value}") { b.check_box + b.text } %>
+    <% end %>
+
+
+  <%= form.submit class: 'workhour-form-button'  %>
 <% end %>
 
