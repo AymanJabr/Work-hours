@@ -7,7 +7,9 @@ class GroupsController < ApplicationController
   end
 
   def monthly_report
-    @groups = Group.all.where(created_at: Time.now.beginning_of_month..Time.now.end_of_month).map { |group| group if group.workhours.any? }.compact
+    @groups = Group.all.where(created_at: Time.now.beginning_of_month..Time.now.end_of_month).map do |group|
+      group if group.workhours.any?
+    end.compact
   end
 
   def show

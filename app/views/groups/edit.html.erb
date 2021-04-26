@@ -1,12 +1,13 @@
-Edit Group Form:
+
+<div class="group-container">
+   <div class="group-name">Edit Group Form:</div>
+</div>
 
 <%= form_for @group do |form| %>
-
- <%= form.label :name %>
- <%= form.text_field :name %>
-  <%= tag(:br) %>
-  <%= tag(:br) %>
-   <%= form.label :icon %>
- <%= form.text_field :icon %> (hr)
- <%= form.submit  %>
+  <% form.options[:html][:class] += ' group-form' %>
+  <%= form.label "Name :", class: 'group-form-name' %>
+  <%= form.text_field :name, class: 'group-form-name-field' %>
+  <%= form.label "Icon URL:", class: 'group-form-icon' %>
+  <%= form.text_field :icon, class: 'group-form-icon-field' %>
+  <%= form.submit class: 'group-form-button'  %>
 <% end %>

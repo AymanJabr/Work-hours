@@ -1,9 +1,9 @@
 require 'rails_helper'
 RSpec.describe 'Sign in page', type: :system do
   describe 'index page' do
-    it 'shows sign in ' do
+    it 'shows Log in ' do
       visit users_path
-      expect(page).to have_content('Sign in')
+      expect(page).to have_content('Log in')
     end
     it 'shows Email ' do
       visit users_path
