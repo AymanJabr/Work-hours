@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
     end
     it 'sucessfully creates a new Group from a user' do
       user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
-      group = user.groups.build(name: 'Some specific group name', icon: 'this groups icon')
+      group = user.groups.build(name: 'Some specific group name', icon: 'https://www.google.com/')
       expect(group.valid?).to eq(true)
     end
     it 'Does not creates a new Group from a user' do
@@ -34,7 +34,7 @@ RSpec.describe User, type: :model do
     it 'sucessfully creates a new Group-Workhour from a Workhour and a Group' do
       user = User.new(id: 1, name: 'username', email: 'username@gmail.com', password: 'password')
       user.save
-      group = user.groups.create(name: 'Some specific group name', icon: 'this groups icon')
+      group = user.groups.create(name: 'Some specific group name', icon: 'https://www.google.com/')
       workhour = user.workhours.create(name: 'Some specific workhour name', amount: 42.3)
       group_workhour = workhour.group_workhours.create(group_id: group.id)
       expect(group_workhour.valid?).to eq(true)
