@@ -3,6 +3,7 @@ class WorkhoursController < ApplicationController
 
   def index
     @workhour = current_user.assigned_workhours
+    @workhour = @workhour.map { |workhour| workhour if workhour.user.id == current_user.id }.compact
     @first_icons = @workhour.map(&:first_group_icon)
   end
 
@@ -16,6 +17,8 @@ class WorkhoursController < ApplicationController
 
   def index_external
     @workhour = current_user.unassigned_workhours
+    @workhour.map { |workhour| p "Same user as current: #{workhour.user.id == current_user.id}" }
+    @workhour = @workhour.map { |workhour| workhour if workhour.user.id == current_user.id }.compact
   end
 
   def new
