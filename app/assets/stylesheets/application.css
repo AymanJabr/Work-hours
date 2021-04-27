@@ -101,9 +101,10 @@ nav a:hover,
   background-color: white;
   margin: 10px;
   padding: 10px;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
+
     "image name name . amount"
     "image . . . amount"
     "image date . . amount"
@@ -115,9 +116,10 @@ nav a:hover,
   background-color: white;
   margin: 10px;
   padding: 10px;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
+
     "image name name . amount"
     "image . . . amount"
     "image date . . amount"
@@ -128,11 +130,13 @@ nav a:hover,
 .information-image {
   grid-area: image;
 }
+
 .information-name {
   grid-area: name;
   color: var(--light-gray);
   font-size: 1.8rem;
 }
+
 .information-amount {
   font-size: 2.2rem;
   margin-top: auto;
@@ -140,6 +144,7 @@ nav a:hover,
   grid-area: amount;
   color: var(--primary-gray);
 }
+
 .information-date {
   grid-area: date;
   color: var(--light-gray);
@@ -198,14 +203,17 @@ nav a:hover,
   padding: 10px;
   grid-template-columns: auto ;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
+
     "name . . . . amount"
 }
+
 .group-name {
   grid-area: name;
   font-size: 2rem;
   color: var(--light-gray);
 }
+
 .group-amount {
   grid-area: amount;
   float: right;
@@ -223,7 +231,8 @@ nav a:hover,
   gap: 20px;
   color: var(--primary-gray);
   font-size: 1.5rem;
-  grid-template-areas: 
+  grid-template-areas:
+
     "email email-field email-field email-field email-field"
     "name name-field name-field name-field name-field"
     "password password-field password-field password-field password-field "
@@ -231,34 +240,43 @@ nav a:hover,
     ". . . . ."
     "button button button button button";
 }
+
 .sign-up-email {
   grid-area: email;
 }
+
 .sign-up-email-field {
   grid-area: email-field;
   font-size: 1.2rem;
 }
+
 .sign-up-name {
   grid-area: name;
 }
+
 .sign-up-name-field {
   grid-area: name-field;
    font-size: 1.2rem;
 }
+
 .sign-up-password {
   grid-area: password;
 }
+
 .sign-up-password-field {
   grid-area: password-field;
   font-size: 1.2rem;
 }
+
 .sign-up-confirm-password {
   grid-area: confirm-password;
 }
+
 .sign-up-confirm-password-field {
   grid-area: confirm-password-field;
   font-size: 1.2rem;
 }
+
 .sign-up-button {
    grid-area: button;
    width: auto;
@@ -274,9 +292,6 @@ nav a:hover,
   background-color: var(--primary-green)
 }
 
-
-
-
 .group-form {
   display: grid;
   background-color: white;
@@ -287,26 +302,32 @@ nav a:hover,
   gap: 20px;
   color: var(--primary-gray);
   font-size: 1.5rem;
-  grid-template-areas: 
+  grid-template-areas:
+
     "name name-field name-field name-field name-field"
     "icon icon-field icon-field icon-field icon-field "
     ". . . . ."
     "button button button button button";
 }
+
 .group-form-name {
   grid-area: name;
 }
+
 .group-form-name-field {
   grid-area: name-field;
   font-size: 1.2rem;
 }
+
 .group-form-icon {
   grid-area: icon;
 }
+
 .group-form-icon-field {
   grid-area: icon-field;
   font-size: 1.2rem;
 }
+
 .group-form-button {
   grid-area: button;
   width: auto;
@@ -322,7 +343,6 @@ nav a:hover,
   background-color: var(--primary-green)
 }
 
-
 .workhour-form {
   display: grid;
   background-color: white;
@@ -333,7 +353,8 @@ nav a:hover,
   gap: 20px;
   color: var(--primary-gray);
   font-size: 1.5rem;
-  grid-template-areas: 
+  grid-template-areas:
+
     "name name-field name-field name-field name-field"
     "amount amount-field amount-field amount-field amount-field "
     ". . . . ."
@@ -342,47 +363,61 @@ nav a:hover,
     "checkbox6 checkbox7 checkbox8 checkbox9 checkbox10"
     "button button button button button";
 }
+
 .workhour-form-name {
   grid-area: name;
 }
+
 .workhour-form-name-field {
   grid-area: name-field;
   font-size: 1.5rem;
 }
+
 .workhour-form-amount {
   grid-area: amount;
 }
+
 .workhour-form-amount-field {
   grid-area: amount-field;
   font-size: 1.5rem;
 }
+
 .workhour-form-explanation {
   grid-area: explanation
 }
+
 .workhour-form-checkbox-1 {
   grid-area: checkbox1;
 }
+
 .workhour-form-checkbox-2 {
   grid-area: checkbox2;
 }
+
 .workhour-form-checkbox-3 {
   grid-area: checkbox3;
 }
+
 .workhour-form-checkbox-4 {
   grid-area: checkbox4;
 }
+
 .workhour-form-checkbox-5 {
   grid-area: checkbox5;
 }
+
 .workhour-form-checkbox-6 {
   grid-area: checkbox6;
 }
+
 .workhour-form-checkbox-7 {
   grid-area: checkbox7;
 }
+
 .workhour-form-checkbox-8 {
   grid-area: checkbox8;
 }
+
 .workhour-form-button {
   grid-area: button;
   width: auto;
