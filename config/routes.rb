@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  # resource :users, only: [:show, :index] 
   resources :users
   resources :groups
   resources :workhours

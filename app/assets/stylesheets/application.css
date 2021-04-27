@@ -7,13 +7,6 @@
   --light-blue: #2b5f9a;
 }
 
-/* @font-face {
-  font-family: "proximanova";
-  src: asset-url("fonts/FontsFree-Net-Proxima-Nova-Bold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-} */
-
 body {
   background-color: var(--very-light-gray);
   font-family: "proximanova", sans-serif;
