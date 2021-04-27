@@ -1,17 +1,4 @@
-<% @workhour.each do |workhour| %>
-    
-        <div class="information">
-            <div class="information-image"><i class="fas fa-slash fa-4x"></i></div>
-            <div class="information-name"><%= workhour.name %></div>
-            <div class="information-amount"><%= workhour.amount %>hrs</div>
-            <div class="information-date"><%= workhour.created_at %></div>
-
-            <div class="edit-button-container">
-                <%= link_to "Edit Workhours", edit_workhour_path(workhour), :class => "my-edit-button" %>
-            </div>
-        </div>
-    
-<% end %>
+<%= show_correct_workhours(@workhour) %>
 
 <div class="button-container">
     <%= link_to 'Add new Workhours', new_workhour_path, :class => "my-button" %>
