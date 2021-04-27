@@ -151,14 +151,14 @@ nav a:hover,
   font-size: 0.9rem;
 }
 
-.edit-button-container{
-  grid-area: button;  
+.edit-button-container {
+  grid-area: button;
   background-color: var(--primary-green);
   margin-top: 20px;
 }
 
-.all-button-container{
-  grid-area: button2;  
+.all-button-container {
+  grid-area: button2;
   background-color: var(--primary-green);
   margin-top: 20px;
 }
@@ -178,7 +178,7 @@ nav a:hover,
   margin-top: 20px;
 }
 
-.my-button{
+.my-button {
   width: auto;
   font-size: 1.5rem;
   font-weight: bolder;
@@ -201,11 +201,11 @@ nav a:hover,
   display: grid;
   background-color: white;
   padding: 10px;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas:
+  grid-template-areas: 
 
-    "name . . . . amount"
+    "name . . . . amount";
 }
 
 .group-name {
@@ -226,7 +226,7 @@ nav a:hover,
   background-color: white;
   margin: 10px;
   padding: 10px;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-template-rows: auto;
   gap: 20px;
   color: var(--primary-gray);
@@ -256,7 +256,7 @@ nav a:hover,
 
 .sign-up-name-field {
   grid-area: name-field;
-   font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .sign-up-password {
@@ -278,9 +278,9 @@ nav a:hover,
 }
 
 .sign-up-button {
-   grid-area: button;
-   width: auto;
-   font-size: 1.5rem;
+  grid-area: button;
+  width: auto;
+  font-size: 1.5rem;
   font-weight: bolder;
   display: block;
   border-color: white;
@@ -289,7 +289,7 @@ nav a:hover,
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background-color: var(--primary-green)
+  background-color: var(--primary-green);
 }
 
 .group-form {
@@ -297,7 +297,7 @@ nav a:hover,
   background-color: white;
   margin: 10px;
   padding: 10px;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-template-rows: auto;
   gap: 20px;
   color: var(--primary-gray);
@@ -340,7 +340,7 @@ nav a:hover,
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background-color: var(--primary-green)
+  background-color: var(--primary-green);
 }
 
 .workhour-form {
@@ -348,7 +348,7 @@ nav a:hover,
   background-color: white;
   margin: 10px;
   padding: 10px;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-template-rows: auto;
   gap: 20px;
   color: var(--primary-gray);
@@ -383,7 +383,7 @@ nav a:hover,
 }
 
 .workhour-form-explanation {
-  grid-area: explanation
+  grid-area: explanation;
 }
 
 .workhour-form-checkbox-1 {
@@ -429,5 +429,5 @@ nav a:hover,
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background-color: var(--primary-green)
+  background-color: var(--primary-green);
 }

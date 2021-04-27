@@ -1,0 +1,2 @@
+module WorkhourHelper
+end
