@@ -24,6 +24,17 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
+  def update
+    @group = Group.find(params[:id])
+    @group.update(group_params)
+    if @group.save
+      redirect_to @group, notice: 'Group succesfully created'
+    else
+      render :edit, notice: "Book not found"
+
+    end
+  end
+
   def create
     @group = current_user.groups.new(group_params)
     if @group.save

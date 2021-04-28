@@ -9,7 +9,7 @@ module ApplicationHelper
 
   # rubocop:disable Metrics/CyclomaticComplexity
   def page_currently_on
-    return "#{current_user.name} Profile Page" if request.path == ''
+    return "#{current_user.name} Profile Page" if request.path == '/'
     return 'All My Transactions' if request.path == '/workhours'
     return 'All My Unassigned Transactions' if request.path == '/index_external'
     return 'All Groups' if request.path == '/groups'
