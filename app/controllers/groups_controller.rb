@@ -30,7 +30,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to @group, notice: 'Group succesfully created'
     else
-      render :edit, notice: "Book not found"
+      render :edit, notice: 'Book not found'
 
     end
   end

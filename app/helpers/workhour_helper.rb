@@ -20,7 +20,7 @@ module WorkhourHelper
     all_contents = content_tag(:br)
     workhours.each do |workhour|
       all_contents << content_tag(:div, class: 'information') do
-        inside_content = content_tag(:div, content_tag(:i,"", class: "fas fa-slash fa-4x"), class: 'information-image')
+        inside_content = content_tag(:div, content_tag(:i, '', class: 'fas fa-slash fa-4x'), class: 'information-image')
         inside_content << content_tag(:div, workhour.name, class: 'information-name')
         inside_content << content_tag(:div, workhour.amount, class: 'information-amount')
         inside_content << content_tag(:div, workhour.created_at, class: 'information-date')
