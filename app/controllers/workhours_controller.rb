@@ -43,7 +43,6 @@ class WorkhoursController < ApplicationController
     else
       render :edit, notice: 'Update Workhours failed'
     end
-
   end
 
   private
