@@ -1,21 +1,11 @@
 require 'rails_helper'
 RSpec.describe 'User Profile Page', type: :system do
-  describe 'index page' do
-    it 'shows Log in ' do
-      visit users_path
-      expect(page).to have_content('Log in')
-    end
-    it 'shows Email ' do
-      visit users_path
-      expect(page).to have_content('Email')
-    end
-    it 'shows Password ' do
-      visit users_path
-      expect(page).to have_content('Password')
-    end
-    it 'shows Sign up ' do
-      visit users_path
-      expect(page).to have_content('Sign up')
+  describe 'User Profile' do
+    it 'shows Profile ' do
+      user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd')
+      login_as(user, :scope => :user)
+      visit root_path
+      expect(page).to have_content('Profile Page')
     end
   end
 end
