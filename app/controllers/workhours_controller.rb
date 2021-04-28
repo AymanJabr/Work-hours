@@ -11,10 +11,6 @@ class WorkhoursController < ApplicationController
     @workhour = Workhour.find(params[:id])
   end
 
-  def edit
-    @workhour = Workhour.find(params[:id])
-  end
-
   def index_external
     @workhour = current_user.unassigned_workhours
     @workhour.map { |workhour| p "Same user as current: #{workhour.user.id == current_user.id}" }
@@ -32,6 +28,22 @@ class WorkhoursController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @workhour = Workhour.find(params[:id])
+    session[:return_to] ||= request.referer
+  end
+
+  def update
+    @workhour = Workhour.find(params[:id])
+    @workhour.update(workhour_params)
+    if @workhour.save
+      redirect_to session.delete(:return_to), notice: 'Workhours succesfully updated'
+    else
+      render :edit, notice: 'Update Workhours failed'
+    end
+
   end
 
   private
