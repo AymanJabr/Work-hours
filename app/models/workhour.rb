@@ -10,7 +10,7 @@ class Workhour < ApplicationRecord
   scope :in_order, -> { order(created_at: :desc) }
 
   def first_group_icon
-    group = Group.all
-    group.in_order.first.icon
+    all_groups = groups
+    all_groups.in_order.first.icon
   end
 end
