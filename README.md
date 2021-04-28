@@ -36,6 +36,15 @@ Instal gems with:
 bundle install
 ```
 
+Make sure to have yarn installed in your system:
+
+`npm install --global yarn`
+
+and run yarn with 
+
+`yarn run`
+
+
 Setup database with:
 
 ```

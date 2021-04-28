@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   
-  # resource :users, only: [:show, :index] 
-  resources :users
-  resources :groups
-  resources :workhours
+  resources :users, only: [:index, :show]
+  resources :groups, only: [:index, :monthly_report, :show, :new, :edit, :update, :create]
+  resources :workhours, only: [:index, :show, :edit, :index_external, :new, :create, :update]
   get '/index_external', to: 'workhours#index_external'
   get '/monthly_report', to: 'groups#monthly_report'
 
