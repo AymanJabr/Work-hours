@@ -28,9 +28,9 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @group.update(group_params)
     if @group.save
-      redirect_to @group, notice: 'Group succesfully created'
+      redirect_to @group, notice: 'Group succesfully updated'
     else
-      render :edit, notice: 'Book not found'
+      render :edit, notice: 'Update Group failed'
 
     end
   end
